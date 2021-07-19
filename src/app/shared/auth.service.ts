@@ -44,7 +44,7 @@ export class AuthService {
     this.setToken(null)
   }
 
-  isAuthenicated(){
-    return null||this.token
+  isAuthenticated(){
+    return !!this.token
   }
 }
