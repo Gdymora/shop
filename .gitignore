@@ -6,10 +6,9 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-
+# git rm -r --cached -- ./src/environments/
 # dependencies
 /node_modules
-/src/environments
 
 # profiling files
 chrome-profiler-events*.json
@@ -40,6 +39,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/src/environments/**
 
 # System Files
 .DS_Store
