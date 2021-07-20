@@ -10,6 +10,7 @@ import { AdminLayoutComponent } from "./shared/admin-layout/admin-layout.compone
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from "../shared/auth.guard";
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
     declarations: [
@@ -36,9 +37,10 @@ import { AuthGuard } from "../shared/auth.guard";
                         { path: 'product/:id/edit', component: EditPageComponent, canActivate: [AuthGuard] },
                     ]
                 }
-            ])
+            ]),
+        QuillModule.forRoot(), // Add Quill Angular WYSIWYG Editor 
     ],
-    
+
     exports: [RouterModule]
 })
 export class AdminModule {
