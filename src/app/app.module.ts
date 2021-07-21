@@ -11,7 +11,8 @@ import { AdminLayoutComponent } from "./admin/shared/admin-layout/admin-layout.c
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { AuthInterceptor } from './shared/auth.interceptor';
- 
+import { ProductComponent } from './product/product.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthInterceptor } from './shared/auth.interceptor';
     MainPageComponent,
     ProductPageComponent,
     CartPageComponent,
-    AdminLayoutComponent 
+    AdminLayoutComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +30,9 @@ import { AuthInterceptor } from './shared/auth.interceptor';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    QuillModule.forRoot(), // Add Quill Angular WYSIWYG Editor 
   ],
-  
+
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/shared/product.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class AddPageComponent implements OnInit {
   form: FormGroup
   submitted: boolean = false;
 
-  constructor(private productServis: ProductService) {
+  constructor(
+    private productServis: ProductService,
+    private router: Router
+  ) {
     this.form = new FormGroup({
       type: new FormControl(null, Validators.required),
       title: new FormControl(null, Validators.required),
@@ -37,7 +41,11 @@ export class AddPageComponent implements OnInit {
       date: new Date
     }
     console.log(this.form)
-    this.productServis.create(product).subscribe(res=> console.log(res))
+    this.productServis.create(product).subscribe(res => {
+      this.form.reset()
+      this.submitted = false
+      this.router.navigate(['/'])
+    })
 
   }
 

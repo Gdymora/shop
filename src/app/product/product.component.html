@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <ul>
+        <li>
+            <div class="item-card">
+
+                <quill-view-html class="item-card_img" [content]="product.photo"></quill-view-html>
+
+                <div class="item-card_info">
+                    <h3 class="item-card_title">{{product.title}}</h3>
+                    <p class="item-card_text">Morbi leo risus,
+                        porta ac consectetur at eros.
+                    </p>
+                    <div class="item-card_border"></div>
+                </div>
+                <div class="informer ">
+                    <span class="informer_date">17 january, 2012</span>
+                    <a href="" class="informer_comments">15</a>
+                </div>
+                <div class="but-card">
+                    <button [routerLink]="['product', product.id]" class="btn btn-dark">Open</button>
+                    <button [routerLink]="['/cart']" class="btn btn-dark">Add to cart</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</div>

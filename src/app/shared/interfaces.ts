@@ -5,14 +5,11 @@ export interface User {
 }
 
 export interface Product {
-    type: string,
-    title: string,
-    photo: any,
-    info: string,
-    price: number,
-    date: Date
-}
-
-export interface FbResponse {
-    name: any
+    type?: string,
+    id?: string
+    title?: string,
+    photo?: any,
+    info?: string,
+    price?: number,
+    date?: Date
 }
