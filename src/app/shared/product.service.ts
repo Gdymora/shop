@@ -38,7 +38,7 @@ export class ProductService {
       }))
   }
 
-  getById(id: number) {
+  getById(id: string) {
     return this.http.get<Product>(`${environment.fbDbUrl}/products/${id}.json`)
       .pipe(map((res: Product) => {
         console.log(res)
@@ -48,5 +48,13 @@ export class ProductService {
           date: new Date(res.date)
         }
       }))
+  }
+
+  remove(id: string) {
+    return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`)
+  }
+
+  update(product: Product) {
+    return this.http.patch<Product>(`${environment.fbDbUrl}/products/${product.id}.json`, product)
   }
 }

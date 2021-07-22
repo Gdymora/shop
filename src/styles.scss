@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import '~quill/dist/quill.snow.css';
+@import "~quill/dist/quill.snow.css";
 
 :root {
     --primary-color: #000000;
@@ -283,100 +283,102 @@ table th {
 }
 
 /*CARD*/
+
 .wrapper {
     max-width: 970px;
     height: 100%;
     margin: 0 auto;
     vertical-align: top;
-  }
-  .wrapper ul {
+}
+.wrapper ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-align: center;
-  }
-  .wrapper li {
+}
+.wrapper li {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 20px;
     margin-left: 5px;
     margin-right: 5px;
-  }
-  
-  .item-card {
+}
+
+.item-card {
     max-width: 300px;
     height: 100%;
-    border: 1px solid #E8E8E8;
-    background-color: #F7F7F7;
+    border: 1px solid #e8e8e8;
+    background-color: #f7f7f7;
     margin: 0 auto;
-  }
-  
-  .item-card_img img {
-    height: 300px;   
-  }
-  
-  .item-card_info {
+}
+
+.item-card_img img {
+    height: 300px;
+}
+
+.item-card_info {
     padding: 0 20px;
     padding: 16px 18px;
     padding-bottom: 0px;
     color: #777;
     font-size: 12px;
     min-height: 200px;
-  }
-  
-  .item-card_title {
+}
+
+.item-card_title {
     margin: 0px;
     margin-bottom: 10px;
     font-size: 15px;
     font-family: "AllerBd", sans-serif;
-  }
-  
-  .item-card_text {
+}
+
+.item-card_text {
     line-height: 1.52em;
     font-size: 13.4px;
     margin-bottom: 18px;
     font-family: "DroidSans", sans-serif;
-  }
-  
-  .item-card_border:after {
+}
+
+.item-card_border:after {
     content: "";
     display: block;
     height: 1px;
     width: 98.5%;
     margin: 0px auto;
     /* background: url(../img/2.png) repeat-x left center; */
-  }
-  .item-card_border:before {
+}
+.item-card_border:before {
     content: "";
     display: block;
     height: 1px;
     width: 100%;
     margin-bottom: 2px;
-   /*  background: url(../img/2.png) repeat-x left center; */
-  }
-  
-  .informer {
+    /*  background: url(../img/2.png) repeat-x left center; */
+}
+
+.informer {
     position: relative;
     bottom: 0px;
     height: 40px;
     padding: 12px 17px;
     color: #999;
     font-size: 11px;
-  }
-  
-  .informer_date, .informer_comments {
+}
+
+.informer_date,
+.informer_comments {
     display: block;
     line-height: 16px;
     font-family: "DroidSans", sans-serif;
-  }
-  
-  .informer_date {
+}
+
+.informer_date {
     padding-left: 22px;
-   /*  background: url(../img/3.png) no-repeat left top; */
+    /*  background: url(../img/3.png) no-repeat left top; */
     float: left;
     position: relative;
-  }
-  .informer_date:after {
+}
+.informer_date:after {
     display: block;
     width: 14px;
     height: 9px;
@@ -387,16 +389,16 @@ table th {
     position: absolute;
     left: 0px;
     bottom: 2px;
-  }
-  
-  .informer_comments {
+}
+
+.informer_comments {
     text-decoration: none;
     color: #999;
     float: right;
     padding: 0px 5px 0px 22px;
     /* background: url(../img/4.png) no-repeat left top; */
-  }
-  .but-card{
-      margin-bottom: 1rem;
-  }
+}
+.but-card {
+    margin-bottom: 1rem;
+}
 /*------------------*/
