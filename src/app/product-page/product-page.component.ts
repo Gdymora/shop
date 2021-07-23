@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../shared/product.service';
 import { Observable, pipe } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Product } from '../shared/interfaces';
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -25,6 +26,10 @@ export class ProductPageComponent implements OnInit {
           return this.productServis.getById(params['id'])
         }
       ))
+  }
+
+  addProduct(product: Product) {
+    this.productServis.addProduct(product)
   }
 
 }

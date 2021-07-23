@@ -12,7 +12,7 @@ export class MainPageComponent implements OnInit {
 
   products$: Observable<any>;
 
-  constructor(private productServis: ProductService) { }
+  constructor(public productServis: ProductService) { }
 
   ngOnInit(): void {
     this.products$ = this.productServis.getAll()

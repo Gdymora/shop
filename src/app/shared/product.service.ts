@@ -10,6 +10,9 @@ import { Product } from "./interfaces";
 })
 export class ProductService {
 
+  type: string = 'Phone'
+  cartProducts: Product[] = []
+
   constructor(private http: HttpClient) { }
 
   create(product: Product): Observable<Product> {
@@ -56,5 +59,13 @@ export class ProductService {
 
   update(product: Product) {
     return this.http.patch<Product>(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+  }
+
+  setType(type: string) {
+    this.type = type
+  }
+
+  addProduct(product: Product) {
+    this.cartProducts.push(product)
   }
 }
