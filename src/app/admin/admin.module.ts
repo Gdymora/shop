@@ -11,6 +11,7 @@ import { AdminLayoutComponent } from "./shared/admin-layout/admin-layout.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from "../shared/auth.guard";
 import { QuillModule } from 'ngx-quill';
+import { SearchPipe } from '../shared/search.pipe';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { QuillModule } from 'ngx-quill';
         DashboardPageComponent,
         AddPageComponent,
         OrdersPageComponent,
-        EditPageComponent
+        EditPageComponent,
+        SearchPipe,
     ],
     imports: [
         CommonModule,
@@ -38,7 +40,7 @@ import { QuillModule } from 'ngx-quill';
                     ]
                 }
             ]),
-        QuillModule.forRoot(), // Add Quill Angular WYSIWYG Editor 
+        QuillModule.forRoot(), // Add Quill Angular WYSIWYG Editor
     ],
 
     exports: [RouterModule]

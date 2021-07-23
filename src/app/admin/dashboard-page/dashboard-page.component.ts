@@ -13,6 +13,8 @@ export class DashboardPageComponent implements OnInit {
   products: any = []
   $pSub: Subscription
   $rSub: Subscription
+  productName: string
+
   constructor(private productServe: ProductService) { }
 
   ngOnInit(): void {
