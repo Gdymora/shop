@@ -19,7 +19,6 @@ export class ProductService {
     return this.http.post<Product>(`${environment.fbDbUrl}/products.json`, product)
       .pipe(
         map((res: any) => {
-          console.log(res)
           return {
             ...product,
             id: res.name,
@@ -44,7 +43,6 @@ export class ProductService {
   getById(id: string) {
     return this.http.get<Product>(`${environment.fbDbUrl}/products/${id}.json`)
       .pipe(map((res: Product) => {
-        console.log(res)
         return {
           ...res,
           id,

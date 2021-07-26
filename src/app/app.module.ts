@@ -14,6 +14,8 @@ import { AuthInterceptor } from './shared/auth.interceptor';
 import { ProductComponent } from './product/product.component';
 import { QuillModule } from 'ngx-quill';
 import { SortingPipe } from './shared/sorting.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -33,7 +35,13 @@ import { SortingPipe } from './shared/sorting.pipe';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    QuillModule.forRoot(), // Add Quill Angular WYSIWYG Editor 
+    QuillModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }), // Add Quill Angular WYSIWYG Editor 
   ],
 
   providers: [

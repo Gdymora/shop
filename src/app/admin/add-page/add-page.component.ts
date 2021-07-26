@@ -40,7 +40,7 @@ export class AddPageComponent implements OnInit {
       price: this.form.value.price,
       date: new Date()
     }
-    console.log(this.form)
+   
     this.productServis.create(product).subscribe(res => {
       this.form.reset()
       this.submitted = false
